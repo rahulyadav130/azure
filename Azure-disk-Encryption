@@ -1,0 +1,7 @@
+How to enable Disk encryption in azure
+
+# create a Keyvault services
+# enable disk encryption in azure key vault servics
+
+execute the below command
+az vm encryption enable -g rahul-demo --name rahul-vm --disk-encryption-keyvault rahul-keyvaults
