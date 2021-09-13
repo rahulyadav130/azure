@@ -1,0 +1,12 @@
+#Sample DSC configuration
+configuration webserverDSCsample
+{   Node WebServerDemo
+   {      WindowsFeature IIS
+      {       Ensure = 'Present'
+              Name   = 'Web-Server'
+              IncludeALLSubFeature  = $true
+      }
+   }
+
+}
+# Enter the name of configuration as mentioned in configuration file.
