@@ -1,0 +1,15 @@
+Create a file named IIS.ps1 with the following contents.
+
+    import-module servermanager
+    add-windowsfeature web-server -includeallsubfeature
+
+If you are a windows local machine , create a file in notepad
+
+Add the above contents
+
+And then save the file as a PowerShell file
+
+1) Choose the Save as type as "All Files"
+
+2) Next give the file name as "IIS.ps1"
+# upload this scripts in storage accoutn blob and later we can use it in VM extension create
