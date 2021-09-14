@@ -1,0 +1,25 @@
+1. Create a file named WebRole.ps1 and add the following contents
+
+    Configuration DScConfiguration {
+    	Node $AllNodes.Where{$_.Role -eq "WebServer"}.NodeName
+        {
+    		WindowsFeature IISInstall {
+    			Ensure = 'Present'
+    			Name   = 'Web-Server'
+       }
+     
+    }}
+
+You need to also zip this file.
+
+2. Create a data configuration file as InstallWebconfig.psd1 and add the following contents
+
+    @{
+      AllNodes = @(  
+     
+            @{
+                NodeName        = "localhost"
+                Role            = "WebServer"
+            }
+    )
+    }
