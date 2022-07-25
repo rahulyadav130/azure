@@ -1,0 +1,9 @@
+Hyper-v enable and creat swtich 
+Id CommandLine
+-- -----------
+ 1 New-VMSwitch -Name "Internal" -SwitchType Internal
+ 2 cls
+ 3 Get-NetAdapter
+ 4 cls
+ 5 New-NetIPAddress -IPAddress 20.0.0.1 -PrefixLength 24 -InterfaceIndex 10
+ 6 New-NetNat -Name "InternalNat" -InternalIPInterfaceAddressPrefix 20.0.0.0/24
