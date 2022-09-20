@@ -1,0 +1,1 @@
+for i in `cat vmlist`; do  az vm run-command invoke -g $grpname  -n $i --command-id RunShellScript --scripts "hostname && systemctl status firewalld | grep Active" ; done >> status
